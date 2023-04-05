@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melange | Home Page</title>
+	<meta charset="utf-8">
+    	
+	<style>
+		body{
+			background-color: lavenderblush;
+			margin: 0px;
+			margin-top:-50px;
+			padding: 0px;
+		}
+		#header {
+			padding: 0px;
+			margin: 0px;
+			background-image: url('https://images.squarespace-cdn.com/content/v1/563a3c43e4b0328c7240b247/1573006377586-8PXZA2FSD4C8FRLVI441/059_DeLuxe+Finals.jpg?format=2500w');
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			text-shadow: 0px 0px 20px #000;
+			height: 500px;
+			line-height: 500px;
+		}
+		#page-wrapper {
+			display:  flex;
+			width: 1000px;
+			margin-top: 2px;
+			margin-left:  auto;
+			margin-right:  auto;
+		}
+		#main {
+			background-color: lightcyan;
+
+			width: 750px;
+			margin-left:  auto;
+			margin-right: auto;
+			padding: 15px;
+		}
+		#side-gallery {
+			background-color: lightyellow;
+
+			width:  190px;
+			padding:  15px;
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		#footer {
+			background-color: lightgrey;
+			text-align: center;
+			color: #000;
+			height: 50px;
+			line-height:  50px;
+		}
+		#main img{
+			width: auto;
+			height: 175px;
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.clearfloat{
+			clear:  both;
+		}
+		.img-container {
+			margin: 15px;
+			width: 160px;
+			height: 220px;
+
+			overflow: hidden;
+			position: relative;
+		}
+		.img-container img {
+			width: 100%;
+			height: auto;
+		}
+		.img-container .height-100 {
+			height: 100%;
+			width: auto;
+		}
+		.caption {
+			color: #FFF;
+			background-color: #000;
+
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			text-align: center;
+			margin: 0;
+			padding-top: 100px;
+
+			background-color: rgba(0, 0, 0, 0.6);
+			visibility: hidden;
+		}
+		.img-container:hover .caption {
+			visibility: visible;
+		}
+		#nav-wrapper, #nav-wrapper ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#nav-wrapper {
+			background-color: lightgrey;
+			box-shadow: 0px 1px 2px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+		}
+		#nav-wrapper li {
+			width: 500px;
+			text-align: center;
+			position: relative;
+		}
+		#nav-wrapper li:hover, #nav-wrapper #active-menu {
+			background-color: rgb(240, 248, 255);
+		}
+		#nav-wrapper a {
+			text-decoration: none;
+			color: #000;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+		}
+		#nav-wrapper ul {
+			position: absolute;
+			display: none;
+		}
+		#nav-wrapper li:hover > ul {
+			background-color: lightgrey;
+			display: block;
+		}
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(226, 83, 255, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .price {
+            color: rgb(125, 143, 153);
+            font-size: 22px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .card button {
+            border: none;
+            outline: 0;
+            padding: 12px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+	</style>
+
+</head>
+
+
+<body>
+	<div id="header">
+		<h1>Melange</h1>
+	</div>
+	<!-- #header -->
+
+	<ul id="nav-wrapper">
+		<li><a id="active-menu" href="homepage.html">Home</a>
+			<ul>
+				<li><a href="our_story.html">OUR STORY</a></li>
+				<li><a href="founding_team.html">USC Team</a></li>
+				
+			</ul>
+		</li>
+		<li><a href="products_page.html">OUR PRODUCTS</a></li>
+	</ul> <!-- #nav-wrapper -->
+
+	<div id="page-wrapper">
+		<div id="main">
+			<div id="ourstory">
+			<div id="uscfoundingteam">
+				<h2>USC Team</h2>
+
+
+				<p>OUR PRODUCTS!</p>
+			</div> <!-- #uscfoundingteam -->
+
+			
+
+		</div> <!-- #main -->
+
+    <div class="card">
+        <img src="https://www.tastyaz.com/wp-content/uploads/2022/09/Triple-Chocolate-Brownies-9.jpg" alt="Brownies" style="width:100%">
+        <h1>Brownies</h1>
+        <p class="price">$40.00 per 5 brownies</p>
+        <p>The most delicious, ooey, gooey brownies ever!</p>
+        <p><button>Add to Cart</button></p>
+      </div>
+      
+      <div class="card">
+          <img src="https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/srh_recipes/4bc5edb86285aadc28069f51d9e98974.jpg" alt="Cookies" style="width:100%">
+          <h1>Cookies</h1>
+          <p class="price">$19.99</p>
+          <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div id="footer">
+            University of Southern California &copy; 2022
+        </div> <!-- #footer -->
+</body>

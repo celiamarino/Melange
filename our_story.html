@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melange | Home Page</title>
+	<meta charset="utf-8">
+    	
+	<style>
+		body{
+			background-color: lavenderblush;
+			margin: 0px;
+			margin-top:-50px;
+			padding: 0px;
+		}
+		#header {
+			padding: 0px;
+			margin: 0px;
+			background-image: url('https://images.squarespace-cdn.com/content/v1/563a3c43e4b0328c7240b247/1573006377586-8PXZA2FSD4C8FRLVI441/059_DeLuxe+Finals.jpg?format=2500w');
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			text-shadow: 0px 0px 20px #000;
+			height: 500px;
+			line-height: 500px;
+		}
+		#page-wrapper {
+			display:  flex;
+			width: 1000px;
+			margin-top: 2px;
+			margin-left:  auto;
+			margin-right:  auto;
+		}
+		#main {
+			background-color: lightcyan;
+
+			width: 750px;
+			margin-left:  auto;
+			margin-right: auto;
+			padding: 15px;
+		}
+		#side-gallery {
+			background-color: lightyellow;
+
+			width:  190px;
+			padding:  15px;
+			display: flex;
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		#footer {
+			background-color: lightgrey;
+			text-align: center;
+			color: #000;
+			height: 50px;
+			line-height:  50px;
+		}
+		#main img{
+			width: auto;
+			height: 175px;
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.clearfloat{
+			clear:  both;
+		}
+		.img-container {
+			margin: 15px;
+			width: 160px;
+			height: 220px;
+
+			overflow: hidden;
+			position: relative;
+		}
+		.img-container img {
+			width: 100%;
+			height: auto;
+		}
+		.img-container .height-100 {
+			height: 100%;
+			width: auto;
+		}
+		.caption {
+			color: #FFF;
+			background-color: #000;
+
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			text-align: center;
+			margin: 0;
+			padding-top: 100px;
+
+			background-color: rgba(0, 0, 0, 0.6);
+			visibility: hidden;
+		}
+		.img-container:hover .caption {
+			visibility: visible;
+		}
+		#nav-wrapper, #nav-wrapper ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#nav-wrapper {
+			background-color: lightgrey;
+			box-shadow: 0px 1px 2px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+		}
+		#nav-wrapper li {
+			width: 500px;
+			text-align: center;
+			position: relative;
+		}
+		#nav-wrapper li:hover, #nav-wrapper #active-menu {
+			background-color: rgb(240, 248, 255);
+		}
+		#nav-wrapper a {
+			text-decoration: none;
+			color: #000;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+		}
+		#nav-wrapper ul {
+			position: absolute;
+			display: none;
+		}
+		#nav-wrapper li:hover > ul {
+			background-color: lightgrey;
+			display: block;
+		}
+	</style>
+
+</head>
+
+
+<body>
+	<div id="header">
+		<h1>Melange</h1>
+	</div>
+	<!-- #header -->
+
+	<ul id="nav-wrapper">
+		<li><a id="active-menu" href="homepage.html">Home</a>
+			<ul>
+				<li><a href="our_story.html">OUR STORY</a></li>
+				<li><a href="founding_team.html">USC Team</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="shipping.html">Shipping & Returns </a></li>
+				<li><a href="terms_and_conditions.html">Terms & Conditions</a></li>	
+				
+			</ul>
+		</li>
+		<li><a href="products_page.html">OUR PRODUCTS</a></li>
+	</ul> <!-- #nav-wrapper -->
+
+	<div id="page-wrapper">
+		<div id="main">
+			<div id="ourstory">
+			<div id="uscfoundingteam">
+				<h2>OUR STORY!</h2>
+
+				<p>At Melange, we bake with simple, natural and unprocessed ingredients. We are passionate about indulging in healthy food while maintaining a body positive perspective.
+
+                    Every Melange treat is a guilt free bite that is made with fewer than five ingredients, no artificial flavors, preservatives, or weird stuff!
+                    
+                    We also offer grain-free, gluten free, refined sugar free, and dairy free options.  </p>
+			</div> <!-- #uscfoundingteam -->
+
+			
+
+		</div> <!-- #main -->
+
+	
+
+	<div id="footer">
+		University of Southern California &copy; 2022
+	</div> <!-- #footer -->
+
+</body>
