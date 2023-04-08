@@ -35,9 +35,13 @@
 			margin-left:  auto;
 			margin-right:  auto;
 		}
+		#subscription-wrapper{
+			margin-bottom: 50px;
+			padding-bottom: 10px;
+			display:  flex;
+		}
 		#main {
 			background-color: lightcyan;
-
 			width: 750px;
 			margin-left:  auto;
 			margin-right: auto;
@@ -141,10 +145,12 @@
 		}
         .card {
             box-shadow: 0 4px 8px 0 rgba(226, 83, 255, 0.2);
-            max-width: 300px;
+            max-width: 200px;
             margin: auto;
             text-align: center;
             font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			display: inline-block;
+			margin-right: 20px;
         }
 
         .price {
@@ -264,9 +270,10 @@
 		</div> <!-- #main -->
 
 		<div class="card"></div>
-		<h3 style="text-align:center">Subscription Pricing</h3>
+		<h2 style="text-align:center">Subscription Pricing</h2>
 		<p style="text-align:center">View our subscription options and choose your preffered option.</p>
 
+		<div id = "subscription-wrapper">
 		<div class="columns">
 		<ul class="price">
 			<li class="header">2 People</li>
@@ -303,6 +310,7 @@
 		</ul>
 		</div>
 		<br><br><br>
+	</div>
 		<h2>Not Ready to Subscribe? Order Loosies!</h2>
 
 
