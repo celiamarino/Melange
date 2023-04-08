@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
     	
 	<style>
+		h2
+		{
+			text-align: center;
+		}
 		body{
 			background-color: lavenderblush;
 			margin: 0px;
@@ -165,6 +169,62 @@
         .card button:hover {
             opacity: 0.7;
         }
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.columns {
+			float: left;
+			width: 33.3%;
+			padding: 8px;
+		}
+
+		.price {
+			list-style-type: none;
+			border: 1px solid #eee;
+			margin: 0;
+			padding: 0;
+			-webkit-transition: 0.3s;
+			transition: 0.3s;
+		}
+
+		.price:hover {
+			box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+		}
+
+		.price .header {
+			background-color: #111;
+			color: white;
+			font-size: 25px;
+		}
+
+		.price li {
+			border-bottom: 1px solid #eee;
+			padding: 20px;
+			text-align: center;
+		}
+
+		.price .grey {
+			background-color: #eee;
+			font-size: 20px;
+		}
+
+		.button {
+			background-color: #04AA6D;
+			border: none;
+			color: white;
+			padding: 10px 25px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		@media only screen and (max-width: 600px) {
+		.columns {
+				width: 100%;
+			}
+		}
 	</style>
 
 </head>
@@ -194,20 +254,62 @@
 		<div id="main">
 			<div id="ourstory">
 			<div id="uscfoundingteam">
-				<h2>USC Team</h2>
+				<h2>Our Products</h2>
 
 
-				<p>OUR PRODUCTS!</p>
 			</div> <!-- #uscfoundingteam -->
 
 			
 
 		</div> <!-- #main -->
 
+		<div class="card"></div>
+		<h3 style="text-align:center">Subscription Pricing</h3>
+		<p style="text-align:center">View our subscription options and choose your preffered option.</p>
+
+		<div class="columns">
+		<ul class="price">
+			<li class="header">2 People</li>
+			<li class="grey">$ 49.99 / week</li>
+			<li>1 Small berry tart</li>
+			<li>6 Chocolate Chip Cookies</li>
+			<li>12 Coconut Macarons</li>
+			<li>12 Brigadeiros</li>
+			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
+		</ul>
+		</div>
+
+		<div class="columns">
+		<ul class="price">
+			<li class="header" style="background-color:#6804aa">5 People</li>
+			<li class="grey">$ 119.99 / month</li>
+			<li>1 Large berry tart</li>
+			<li>15 Chocolate Chip Cookies</li>
+			<li>30 Coconut Macarons</li>
+			<li>30 Brigadeiros</li>
+			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
+		</ul>
+		</div>
+
+		<div class="columns">
+		<ul class="price">
+			<li class="header">12 People</li>
+			<li class="grey">$ 279.99 / month</li>
+			<li>2 Extra Large berry tarts</li>
+			<li>36 Chocolate Chip Cookies</li>
+			<li>72 Coconut Macarons</li>
+			<li>72 Brigadeiros</li>
+			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
+		</ul>
+		</div>
+		<br><br><br>
+		<h2>Not Ready to Subscribe? Order Loosies!</h2>
+
+
     <div class="card">
         <img src="https://www.tastyaz.com/wp-content/uploads/2022/09/Triple-Chocolate-Brownies-9.jpg" alt="Brownies" style="width:100%">
         <h1>Brownies</h1>
-        <p class="price">$40.00 per 5 brownies</p>
+        <p class="price">$40.00 per 5 pieces</p>
         <p>The most delicious, ooey, gooey brownies ever!</p>
         <p><button>Add to Cart</button></p>
       </div>
@@ -215,10 +317,74 @@
       <div class="card">
           <img src="https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/srh_recipes/4bc5edb86285aadc28069f51d9e98974.jpg" alt="Cookies" style="width:100%">
           <h1>Cookies</h1>
-          <p class="price">$19.99</p>
+          <p class="price">$19.99 per 12 pieces</p>
           <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
           <p><button>Add to Cart</button></p>
         </div>
+
+		<div class="card">
+			<img src="https://img.jamieoliver.com/jamieoliver/recipe-database/91994148.jpg?tr=w-800,h-800" alt="BerryTart" style="width:100%">
+			<h1>Berry Tart (M)</h1>
+			<p class="price">$50.00 per 1 tart</p>
+			<p>Refreshing Summery Berry Tart</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://www.iheartbrazil.com/wp-content/uploads/2020/02/traditional-brigadeiro-recipe-9-480x270.jpg" alt="Brigadeiros" style="width:100%">
+			<h1>Brigadeiros</h1>
+			<p class="price">$40.00 per 12 pieces</p>
+			<p>Ooey Gooey GF chocolatey goodness</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://amiraspantry.com/wp-content/uploads/2020/04/basbousa-1-1024x1024.jpg" alt="harissa" style="width:100%">
+			<h1>Harissa</h1>
+			<p class="price">$60.00 per 12 pieces</p>
+			<p>Healthy Almond-Semolina Tunisian pastry with Orange Blossom Water</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://www.modernhoney.com/wp-content/uploads/2019/12/Coconut-Macaroons-9-scaled.jpg" alt="macarons" style="width:100%">
+			<h1>Coconut Macarons</h1>
+			<p class="price">$40.00 per 12 pieces</p>
+			<p>Crunchy and Chewy Coconut Macarons dipped in bitter-sweet chocolate</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://letsdishrecipes.com/wp-content/uploads/2019/11/Chocolate-Pecan-Pie-feature.jpg" alt="pecanPie" style="width:100%">
+			<h1>Pecan Pie</h1>
+			<p class="price">$60.00 per 1 pie</p>
+			<p>The most delicious fall pie (in Spring)</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://thescranline.com/wp-content/uploads/2021/08/Cookie-Dough-Cheesecake-WEB-02.jpg" alt="chessecake" style="width:100%">
+			<h1>Cookie Dough Cheesecake (L)</h1>
+			<p class="price">$80.00 per 1 Cheesecake</p>
+			<p>Your two favorite desserts (cookies + cheesecake) merged in one!</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://amiraspantry.com/wp-content/uploads/2014/03/qatayef-I-500x500.jpg" alt="Qatayef" style="width:100%">
+			<h1>Qatayef</h1>
+			<p class="price">$40.00 per 7 pieces</p>
+			<p>Delicious Levantine Dessert with a creamy-nutty filling</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
+
+		  <div class="card">
+			<img src="https://www.sidechef.com/recipe/2b4ef332-f00d-4c80-8624-49794c853acc.jpg?d=1408x1120" alt="Baghrir" style="width:100%">
+			<h1>Baghrir</h1>
+			<p class="price">$40.00 per 12 pieces</p>
+			<p>Who says you can't have dessert for breakfast? Not with these delicious North African pancakes</p>
+			<p><button>Add to Cart</button></p>
+		  </div>
 
         <div id="footer">
             University of Southern California &copy; 2022
