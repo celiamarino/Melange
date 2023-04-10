@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melange | Home Page</title>
+	<meta charset="utf-8">
+    	
+	<style>
+        body{
+			background-color: lavenderblush;
+			margin: 0px;
+			margin-top:-50px;
+			padding: 0px;
+		}
+        #header {
+			padding: 0px;
+			margin: 0px;
+			background-image: url('https://images.squarespace-cdn.com/content/v1/563a3c43e4b0328c7240b247/1573006377586-8PXZA2FSD4C8FRLVI441/059_DeLuxe+Finals.jpg?format=2500w');
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			text-shadow: 0px 0px 20px #000;
+			height: 500px;
+			line-height: 500px;
+		}
+        #footer {
+			background-color: lightgrey;
+			text-align: center;
+			color: #000;
+			height: 50px;
+			line-height:  50px;
+		}
+        #main img{
+			width: auto;
+			height: 175px;
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.clearfloat{
+			clear:  both;
+		}
+		.img-container {
+			margin: 15px;
+			width: 160px;
+			height: 220px;
+
+			overflow: hidden;
+			position: relative;
+		}
+		.img-container img {
+			width: 100%;
+			height: auto;
+		}
+		.img-container .height-100 {
+			height: 100%;
+			width: auto;
+		}
+		.caption {
+			color: #FFF;
+			background-color: #000;
+
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			text-align: center;
+			margin: 0;
+			padding-top: 100px;
+
+			background-color: rgba(0, 0, 0, 0.6);
+			visibility: hidden;
+		}
+		.img-container:hover .caption {
+			visibility: visible;
+		}
+		#nav-wrapper, #nav-wrapper ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#nav-wrapper {
+			background-color: lightgrey;
+			box-shadow: 0px 1px 2px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+		}
+		#nav-wrapper li {
+			width: 500px;
+			text-align: center;
+			position: relative;
+		}
+		#nav-wrapper li:hover, #nav-wrapper #active-menu {
+			background-color: rgb(240, 248, 255);
+		}
+		#nav-wrapper a {
+			text-decoration: none;
+			color: #000;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+		}
+		#nav-wrapper ul {
+			position: absolute;
+			display: none;
+		}
+		#nav-wrapper li:hover > ul {
+			background-color: lightgrey;
+			display: block;
+		}
+        
+
+        
+        h2 {
+            margin: 20px auto 80px;
+             font-size: 38px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+        details {
+            width: 75%;
+            min-height: 5px;
+            max-width: 700px;
+            padding: 45px 70px 45px 45px;
+            margin: 0 auto;
+            position: relative;
+            font-size: 22px;
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: all .3s;
+        }
+        details + details {
+            margin-top: 20px;  
+        }
+        details[open] {
+            min-height: 50px;
+            background-color: #f6f7f8;
+            box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+        }
+        details p {
+            color: #96999d;
+            font-weight: 300;
+        }
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        summary:focus {
+            outline: none;
+        }
+        summary:focus::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 0 5px rebeccapurple;
+        }
+
+        summary::-webkit-details-marker {
+            display: none
+        }
+
+        .control-icon {
+            fill: rebeccapurple;
+            transition: .3s ease;
+            pointer-events: none;
+        }
+
+        .control-icon-close {
+             display: none;
+        }
+
+        details[open] .control-icon-close {
+            display: initial;
+            transition: .3s ease;
+        }
+
+        details[open] .control-icon-expand {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+	<div id="header">
+		<h1>Melange</h1>
+	</div>
+	<!-- #header -->
+
+	<ul id="nav-wrapper">
+		<li><a id="active-menu" href="homepage.html">Home</a>
+			<ul>
+				<li><a href="our_story.html">OUR STORY</a></li>
+				<li><a href="founding_team.html">USC Team</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="shipping.html">Shipping & Returns </a></li>
+				<li><a href="terms_and_conditions.html">Terms & Conditions</a></li>	
+				
+			</ul>
+		</li>
+		<li><a href="products_page.html">OUR PRODUCTS</a></li>
+	</ul> <!-- #nav-wrapper -->
+
+	<div id="page-wrapper">
+		<h2>Frequently Asked Questions</h2>
+
+        <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <symbol viewBox="0 0 24 24" id="expand-more">
+                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="close">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+                </symbol>
+            </svg>
+    </div>
+
+    <details open>
+        <summary>
+            What is Melange?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+            <p>Melange is a subscription bakery that offers handcrafted, locally sourced baked goods delivered to your door on a weekly basis.</p>
+    </details>
+
+    <details>
+        <summary>
+            How does Melange work?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>Simply choose your subscription frequency and select your delivery location. We will deliver a selection of our fresh baked goods to your door each week.</p>
+    </details>
+
+    <details>
+        <summary>
+            What types of products does Melange offer?    
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>We offer a variety of baked goods including bread, pastries, cookies, and more. Our selection may vary from week to week depending on availability and seasonality.</p>
+    </details>
+
+    <details>
+        <summary>
+            Where does Melange source its ingredients?            
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>
+            We source our ingredients from local producers and suppliers whenever possible. We believe in supporting our local community and using the freshest, highest quality ingredients.        </p>
+    </details>
+
+    <details>
+        <summary>
+            How often will I receive my Melange delivery?            
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>
+            Delivery frequency is based on your selected subscription plan. We offer weekly, bi-weekly, and monthly delivery options.        </p>
+    </details>
+
+    <details>
+        <summary>
+            What if I have dietary restrictions?
+            <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>
+            Please contact us and let us know about your dietary restrictions. We will do our best to accommodate your needs.        </p>
+    </details>
+
+    <details>
+        <summary>
+            How does Melange ensure the freshness of its products?
+             <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
+            <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+        </summary>
+        <p>
+            We take great care in packaging and shipping our products to ensure they arrive in the best possible condition. Our products are shipped in insulated boxes and may include ice packs to maintain their freshness during transit.        </p>
+    </details>
+
+
+	<div id="footer">
+		University of Southern California &copy; 2022
+	</div> <!-- #footer -->
+
+</body>

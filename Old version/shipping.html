@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Melange | Home Page</title>
+	<meta charset="utf-8">
+    	
+	<style>
+        body{
+			background-color: lavenderblush;
+			margin: 0px;
+			margin-top:-50px;
+			padding: 0px;
+		}
+        #header {
+			padding: 0px;
+			margin: 0px;
+			background-image: url('https://images.squarespace-cdn.com/content/v1/563a3c43e4b0328c7240b247/1573006377586-8PXZA2FSD4C8FRLVI441/059_DeLuxe+Finals.jpg?format=2500w');
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			text-shadow: 0px 0px 20px #000;
+			height: 500px;
+			line-height: 500px;
+		}
+        #footer {
+			background-color: lightgrey;
+			text-align: center;
+			color: #000;
+			height: 50px;
+			line-height:  50px;
+		}
+        #main img{
+			width: auto;
+			height: 175px;
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.clearfloat{
+			clear:  both;
+		}
+		.img-container {
+			margin: 15px;
+			width: 160px;
+			height: 220px;
+
+			overflow: hidden;
+			position: relative;
+		}
+		.img-container img {
+			width: 100%;
+			height: auto;
+		}
+		.img-container .height-100 {
+			height: 100%;
+			width: auto;
+		}
+		.caption {
+			color: #FFF;
+			background-color: #000;
+
+			position: absolute;
+			top: 0px;
+			bottom: 0px;
+			left: 0px;
+			right: 0px;
+			text-align: center;
+			margin: 0;
+			padding-top: 100px;
+
+			background-color: rgba(0, 0, 0, 0.6);
+			visibility: hidden;
+		}
+		.img-container:hover .caption {
+			visibility: visible;
+		}
+		#nav-wrapper, #nav-wrapper ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		#nav-wrapper {
+			background-color: lightgrey;
+			box-shadow: 0px 1px 2px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+		}
+		#nav-wrapper li {
+			width: 500px;
+			text-align: center;
+			position: relative;
+		}
+		#nav-wrapper li:hover, #nav-wrapper #active-menu {
+			background-color: rgb(240, 248, 255);
+		}
+		#nav-wrapper a {
+			text-decoration: none;
+			color: #000;
+			display: block;
+			height: 50px;
+			line-height: 50px;
+		}
+		#nav-wrapper ul {
+			position: absolute;
+			display: none;
+		}
+		#nav-wrapper li:hover > ul {
+			background-color: lightgrey;
+			display: block;
+		}
+        
+
+        
+        h2 {
+            margin: 20px auto 80px;
+             font-size: 38px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+
+        h3 {
+            margin: 20px auto 80px;
+            font-size: 25px;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 2px;
+            line-height: 1.5;
+        }
+        p{
+            margin: 20px auto 80px;
+            text-align: center; 
+        }
+        details {
+            width: 75%;
+            min-height: 5px;
+            max-width: 700px;
+            padding: 45px 70px 45px 45px;
+            margin: 0 auto;
+            position: relative;
+            font-size: 22px;
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 15px;
+            box-sizing: border-box;
+            transition: all .3s;
+        }
+        details + details {
+            margin-top: 20px;  
+        }
+        details[open] {
+            min-height: 50px;
+            background-color: #f6f7f8;
+            box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+        }
+        details p {
+            color: #96999d;
+            font-weight: 300;
+        }
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        summary:focus {
+            outline: none;
+        }
+        summary:focus::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 0 5px rebeccapurple;
+        }
+
+        summary::-webkit-details-marker {
+            display: none
+        }
+
+        .control-icon {
+            fill: rebeccapurple;
+            transition: .3s ease;
+            pointer-events: none;
+        }
+
+        .control-icon-close {
+             display: none;
+        }
+
+        details[open] .control-icon-close {
+            display: initial;
+            transition: .3s ease;
+        }
+
+        details[open] .control-icon-expand {
+            display: none;
+        }
+    </style>
+</head>
+
+
+<body>
+	<div id="header">
+		<h1>Melange</h1>
+	</div>
+	<!-- #header -->
+
+	<ul id="nav-wrapper">
+		<li><a id="active-menu" href="homepage.html">Home</a>
+			<ul>
+				<li><a href="our_story.html">OUR STORY</a></li>
+				<li><a href="founding_team.html">USC Team</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="shipping.html">Shipping & Returns </a></li>
+				<li><a href="terms_and_conditions.html">Terms & Conditions</a></li>	
+				
+			</ul>
+		</li>
+		<li><a href="products_page.html">OUR PRODUCTS</a></li>
+	</ul> <!-- #nav-wrapper -->
+
+	<div id="page-wrapper">
+		<h2>Shipping and Returns</h2>
+
+        <h3> SHIPPING POLICY </h3>
+
+        <p>At Melange, we offer weekly delivery of our handcrafted, locally sourced baked goods to our subscription customers. We strive to provide reliable and timely delivery of our products, so you can enjoy the freshest baked goods possible.
+            
+            Our delivery schedule is based on your selected subscription frequency and delivery location. Please note that delivery dates are subject to change due to unforeseen circumstances such as weather, road closures, or other factors beyond our control.
+
+            We currently deliver to select locations within our service area. To see if we deliver to your area, please check our website or contact us directly. If we do not currently deliver to your area, we may be able to make special arrangements for an additional fee.
+
+            We take great care in packaging and shipping our products to ensure they arrive in the best possible condition. Our products are shipped in insulated boxes to maintain their freshness during transit.
+            
+            If you need to modify or cancel your delivery, please let us know as soon as possible. Changes or cancellations made within 48 hours of your scheduled delivery may not be possible.
+
+            If you have any questions or concerns about our shipping policy, please contact our customer care team. We are here to help and will do our best to provide you with the best possible experience. 
+        </p>
+
+        <h3> RETURN & EXCHANGE POLICY </h3>
+
+        <p>At Melange, we take great pride in our handcrafted, locally sourced baked goods and strive to provide you with the highest quality products. We stand behind the quality of our products, and if you are not satisfied with your order, we will do our best to make it right.
+
+            If you receive a product that is damaged, defective, or does not meet your expectations, please contact us within 24 hours of receiving your order. We will work with you to resolve the issue and may offer a replacement or refund.
+            
+            ​
+            
+            Due to the perishable nature of our products, we cannot accept returns or exchanges for products that have been opened or consumed. If you are dissatisfied with your order, please contact us and we will do our best to resolve the issue to your satisfaction.
+            
+            If you need to modify or cancel your subscription, please let us know as soon as possible. Changes or cancellations made within 48 hours of your scheduled delivery may not be possible.
+            
+            ​
+            
+            We take great care in packaging and shipping our products to ensure they arrive in the best possible condition. If you receive a package that appears to be damaged or tampered with, please contact us immediately.
+            
+            ​
+            
+            If you have any questions or concerns about our returns and exchange policy, please contact our customer care team. We are here to help and will do our best to provide you with the best possible experience.
+        </p>
+
+	<div id="footer">
+		University of Southern California &copy; 2022
+	</div> <!-- #footer -->
+
+</body>

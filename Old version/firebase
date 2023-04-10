@@ -1,0 +1,20 @@
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+const firebaseConfig = {
+  apiKey: "AIzaSyBrRN6m-jvws_36xRzwVRSGxqinAYQiY9I",
+  authDomain: "melange-44f84.firebaseapp.com",
+  projectId: "melange-44f84",
+  storageBucket: "melange-44f84.appspot.com",
+  messagingSenderId: "73520647804",
+  appId: "1:73520647804:web:c1387ef535a843054bc3f9",
+  measurementId: "G-7VCCN64BVJ"
+}
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication and get a reference to the service
+const auth = getAuth(app);
