@@ -1,400 +1,277 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-<head>
-	<title>Melange | Home Page</title>
-	<meta charset="utf-8">
-    	
-	<style>
-		h2
-		{
-			text-align: center;
-		}
-		body{
-			background-color: lavenderblush;
-			margin: 0px;
-			margin-top:-50px;
-			padding: 0px;
-		}
-		#header {
-			padding: 0px;
-			margin: 0px;
-			background-image: url('https://images.squarespace-cdn.com/content/v1/563a3c43e4b0328c7240b247/1573006377586-8PXZA2FSD4C8FRLVI441/059_DeLuxe+Finals.jpg?format=2500w');
-			background-size: cover;
-			background-position: center;
-			color: #FFF;
-			font-size: 2em;
-			text-align: center;
-			text-shadow: 0px 0px 20px #000;
-			height: 500px;
-			line-height: 500px;
-		}
-		#page-wrapper {
-			display:  flex;
-			width: 1000px;
-			margin-top: 2px;
-			margin-left:  auto;
-			margin-right:  auto;
-		}
-		#subscription-wrapper{
-			margin-bottom: 50px;
-			padding-bottom: 10px;
-			display:  flex;
-		}
-		#main {
-			background-color: lightcyan;
-			width: 750px;
-			margin-left:  auto;
-			margin-right: auto;
-			padding: 15px;
-		}
-		#side-gallery {
-			background-color: lightyellow;
+	<head>
+		<title>Melange - Products</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
 
-			width:  190px;
-			padding:  15px;
-			display: flex;
-			align-items: flex-start;
-			flex-direction: column;
-		}
-		#footer {
-			background-color: lightgrey;
-			text-align: center;
-			color: #000;
-			height: 50px;
-			line-height:  50px;
-		}
-		#main img{
-			width: auto;
-			height: 175px;
-			float: right;
-			margin-left: 15px;
-			margin-bottom: 15px;
-		}
-		.clearfloat{
-			clear:  both;
-		}
-		.img-container {
-			margin: 15px;
-			width: 160px;
-			height: 220px;
+			<!-- Header -->
+            <section id="header" class="wrapper">
 
-			overflow: hidden;
-			position: relative;
-		}
-		.img-container img {
-			width: 100%;
-			height: auto;
-		}
-		.img-container .height-100 {
-			height: 100%;
-			width: auto;
-		}
-		.caption {
-			color: #FFF;
-			background-color: #000;
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="index.html">Melange</a></h1>
+                </div>
+                
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li class="current"><a href="index.html">Home</a></li>
+                            <li><a href="ourStory.html">Our Story</a></li>
+                            <li><a href="team.html">USC Team</a></li>
+                            <li><a href="ourProducts.html">Our Products</a></li>
 
-			position: absolute;
-			top: 0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-			text-align: center;
-			margin: 0;
-			padding-top: 100px;
+                            <li>
+                                <a href="#">More</a>
+                                <ul>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="shipping.html">Shipping & Returns</a></li>
+                                    <li><a href="termsAndCond.html">Terms & Conditions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+            </section>
 
-			background-color: rgba(0, 0, 0, 0.6);
-			visibility: hidden;
-		}
-		.img-container:hover .caption {
-			visibility: visible;
-		}
-		#nav-wrapper, #nav-wrapper ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		#nav-wrapper {
-			background-color: lightgrey;
-			box-shadow: 0px 1px 2px;
-			display: flex;
-			align-items: flex-start;
-			justify-content: center;
-		}
-		#nav-wrapper li {
-			width: 500px;
-			text-align: center;
-			position: relative;
-		}
-		#nav-wrapper li:hover, #nav-wrapper #active-menu {
-			background-color: rgb(240, 248, 255);
-		}
-		#nav-wrapper a {
-			text-decoration: none;
-			color: #000;
-			display: block;
-			height: 50px;
-			line-height: 50px;
-		}
-		#nav-wrapper ul {
-			position: absolute;
-			display: none;
-		}
-		#nav-wrapper li:hover > ul {
-			background-color: lightgrey;
-			display: block;
-		}
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(226, 83, 255, 0.2);
-            max-width: 200px;
-            margin: auto;
-            text-align: center;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-			display: inline-block;
-			margin-right: 20px;
-        }
-
-        .price {
-            color: rgb(125, 143, 153);
-            font-size: 22px;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        .card button {
-            border: none;
-            outline: 0;
-            padding: 12px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-
-        .card button:hover {
-            opacity: 0.7;
-        }
-
-		* {
-			box-sizing: border-box;
-		}
-
-		.columns {
-			float: left;
-			width: 33.3%;
-			padding: 8px;
-		}
-
-		.price {
-			list-style-type: none;
-			border: 1px solid #eee;
-			margin: 0;
-			padding: 0;
-			-webkit-transition: 0.3s;
-			transition: 0.3s;
-		}
-
-		.price:hover {
-			box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-		}
-
-		.price .header {
-			background-color: #111;
-			color: white;
-			font-size: 25px;
-		}
-
-		.price li {
-			border-bottom: 1px solid #eee;
-			padding: 20px;
-			text-align: center;
-		}
-
-		.price .grey {
-			background-color: #eee;
-			font-size: 20px;
-		}
-
-		.button {
-			background-color: #04AA6D;
-			border: none;
-			color: white;
-			padding: 10px 25px;
-			text-align: center;
-			text-decoration: none;
-			font-size: 18px;
-		}
-
-		@media only screen and (max-width: 600px) {
-		.columns {
-				width: 100%;
-			}
-		}
-	</style>
-
-</head>
-
-
-<body>
-	<div id="header">
-		<h1>Melange</h1>
-	</div>
-	<!-- #header -->
-
-	<ul id="nav-wrapper">
-		<li><a id="active-menu" href="homepage.html">Home</a>
-			<ul>
-				<li><a href="our_story.html">OUR STORY</a></li>
-				<li><a href="founding_team.html">USC Team</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="shipping.html">Shipping & Returns </a></li>
-				<li><a href="terms_and_conditions.html">Terms & Conditions</a></li>	
-				
-			</ul>
-		</li>
-		<li><a href="products_page.html">OUR PRODUCTS</a></li>
-	</ul> <!-- #nav-wrapper -->
-
-	<div id="page-wrapper">
-		<div id="main">
-			<div id="ourstory">
-			<div id="uscfoundingteam">
-				<h2>Our Products</h2>
-
-
-			</div> <!-- #uscfoundingteam -->
-
+			<!-- Individuals -->
+			<div id="main" class="wrapper style1">
+				<div class="container">
+					<!-- Content -->
+						<div id="content">
+							<article class="box post">
+								<header class="style1">
+									<h2>Shop</h2>
+								</header>
+								<div class="row aln-center">
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/brownies (1).jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/Honey-Biscuits.jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/Cardamom-Orange-Olive-Oil-Cake-horizontal.jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+								</div>
+								<div class="row aln-center">
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/brownies (1).jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/Honey-Biscuits.jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+									<div class="col-4 col-12-medium">
+										<div class="card">
+											<img src="images/Cardamom-Orange-Olive-Oil-Cake-horizontal.jpg" alt="Denim Jeans" style="width:100%">
+											<h1>Tailored Jeans</h1>
+											<p class="price">$19.99</p>
+											<p>Some text about the jeans..</p>
+											<p><button>Add to Cart</button></p>
+										</div>
+									</div>
+								</div>
+							</article>
+						</div>
+				</div>
+			</div>
 			
+			<!-- Subscription -->
+			<section id="highlights" class="wrapper style3">
+				<div class="title">Subscription Services</div>
+				<div class="row aln-center">
+					<div class="col-4 col-12-medium">
+						<div class="card">
+							<img src="images/brownies (1).jpg" alt="Denim Jeans" style="width:100%">
+							<h1>Tailored Jeans</h1>
+							<p class="price">$19.99</p>
+							<p>Some text about the jeans..</p>
+							<p><button>Add to Cart</button></p>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="card">
+							<img src="images/Honey-Biscuits.jpg" alt="Denim Jeans" style="width:100%">
+							<h1>Tailored Jeans</h1>
+							<p class="price">$19.99</p>
+							<p>Some text about the jeans..</p>
+							<p><button>Add to Cart</button></p>
+						</div>
+					</div>
+					<div class="col-4 col-12-medium">
+						<div class="card">
+							<img src="images/Cardamom-Orange-Olive-Oil-Cake-horizontal.jpg" alt="Denim Jeans" style="width:100%">
+							<h1>Tailored Jeans</h1>
+							<p class="price">$19.99</p>
+							<p>Some text about the jeans..</p>
+							<p><button>Add to Cart</button></p>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row aln-center">
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="#" class="image featured"><img src="images/Cardamom-Orange-Olive-Oil-Cake-horizontal.jpg" alt="" /></a>
+								<h3><a href="#">Vegan and Dairy Free Orange Olive Oil Cakem</a></h3>
+								<p>Enjoy our iconic and completely vegan orange olive oil cake! This refreshing and fluffy cake works as a little something besides your coffee or for any friends you might have over.</p>
+								<ul class="actions">
+									<li><a href="#" class="button style1">Shop Cake</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="#" class="image featured"><img src="images/brownies (1).jpg" alt="" /></a>
+								<h3><a href="#">Ooey Gooey Brownies</a></h3>
+								<p>The gooeyest brownies ever. PERIOD. Enjoy these chocolatey and fudgy deliciousness by clicking below!</p>
+								<ul class="actions">
+									<li><a href="#" class="button style1">Shop Brownies</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="col-4 col-12-medium">
+							<section class="highlight">
+								<a href="#" class="image featured"><img src="images/Honey-Biscuits.jpg" alt="" /></a>
+								<h3><a href="#">Honey Baked Biscuts</a></h3>
+								<p>Indulge in the comforting and satisfying taste of our honey baked biscuits made from scratch with the finest ingredients at our bakery. Whether for breakfast, brunch or as a sweet treat any time of day, each bite is a heavenly experience that leaves you craving more.</p>
+								<ul class="actions">
+									<li><a href="#" class="button style1">Learn More</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
 
-		</div> <!-- #main -->
+			<!-- Footer -->
+            <section id="footer" class="wrapper">
+                <div class="container">
+                    
+                    <div class="row">
+                        <div class="col-6 col-12-medium">
 
-		<div class="card"></div>
-		<h2 style="text-align:center">Subscription Pricing</h2>
-		<p style="text-align:center">View our subscription options and choose your preffered option.</p>
+                            <!-- Contact Form -->
+                                <section>
+                                    <form method="post" action="#">
+                                        <div class="row gtr-50">
+                                            <div class="col-6 col-12-small">
+                                                <input type="text" name="name" id="contact-name" placeholder="Name" />
+                                            </div>
+                                            <div class="col-6 col-12-small">
+                                                <input type="text" name="email" id="contact-email" placeholder="Email" />
+                                            </div>
+                                            <div class="col-12">
+                                                <textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
+                                            </div>
+                                            <div class="col-12">
+                                                <ul class="actions">
+                                                    <li><input type="submit" class="style1" value="Send" /></li>
+                                                    <li><input type="reset" class="style2" value="Reset" /></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </section>
 
-		<div id = "subscription-wrapper">
-		<div class="columns">
-		<ul class="price">
-			<li class="header">2 People</li>
-			<li class="grey">$ 49.99 / week</li>
-			<li>1 Small berry tart</li>
-			<li>6 Chocolate Chip Cookies</li>
-			<li>12 Coconut Macarons</li>
-			<li>12 Brigadeiros</li>
-			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
-		</ul>
+                        </div>
+                        <div class="col-6 col-12-medium">
+
+                            <!-- Contact -->
+                                <section class="feature-list small">
+                                    <div class="row">
+                                        <div class="col-6 col-12-small">
+                                            <section>
+                                                <h3 class="icon solid fa-home">Mailing Address</h3>
+                                                <p>
+                                                    Untitled Corp<br />
+                                                    1234 Somewhere Rd<br />
+                                                    Nashville, TN 00000
+                                                </p>
+                                            </section>
+                                        </div>
+                                        <div class="col-6 col-12-small">
+                                            <section>
+                                                <h3 class="icon solid fa-comment">Social</h3>
+                                                <p>
+                                                    <a href="#">@untitled-corp</a><br />
+                                                    <a href="#">linkedin.com/untitled</a><br />
+                                                    <a href="#">facebook.com/untitled</a>
+                                                </p>
+                                            </section>
+                                        </div>
+                                        <div class="col-6 col-12-small">
+                                            <section>
+                                                <h3 class="icon solid fa-envelope">Email</h3>
+                                                <p>
+                                                    <a href="#">info@untitled.tld</a>
+                                                </p>
+                                            </section>
+                                        </div>
+                                        <div class="col-6 col-12-small">
+                                            <section>
+                                                <h3 class="icon solid fa-phone">Phone</h3>
+                                                <p>
+                                                    (000) 555-0000
+                                                </p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </section>
+
+                        </div>
+                    </div>
+                    <div id="copyright">
+                        <ul>
+                            <li>&copy; University Of Southern California.</li><li>2022</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
 		</div>
 
-		<div class="columns">
-		<ul class="price">
-			<li class="header" style="background-color:#6804aa">5 People</li>
-			<li class="grey">$ 119.99 / month</li>
-			<li>1 Large berry tart</li>
-			<li>15 Chocolate Chip Cookies</li>
-			<li>30 Coconut Macarons</li>
-			<li>30 Brigadeiros</li>
-			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
-		</ul>
-		</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-		<div class="columns">
-		<ul class="price">
-			<li class="header">12 People</li>
-			<li class="grey">$ 279.99 / month</li>
-			<li>2 Extra Large berry tarts</li>
-			<li>36 Chocolate Chip Cookies</li>
-			<li>72 Coconut Macarons</li>
-			<li>72 Brigadeiros</li>
-			<li class="grey"><a href="#" class="button">Subscribe Now</a></li>
-		</ul>
-		</div>
-		<br><br><br>
-	</div>
-		<h2>Not Ready to Subscribe? Order Loosies!</h2>
-
-
-    <div class="card">
-        <img src="https://www.tastyaz.com/wp-content/uploads/2022/09/Triple-Chocolate-Brownies-9.jpg" alt="Brownies" style="width:100%">
-        <h1>Brownies</h1>
-        <p class="price">$40.00 per 5 pieces</p>
-        <p>The most delicious, ooey, gooey brownies ever!</p>
-        <p><button>Add to Cart</button></p>
-      </div>
-      
-      <div class="card">
-          <img src="https://www.verybestbaking.com/sites/g/files/jgfbjl326/files/srh_recipes/4bc5edb86285aadc28069f51d9e98974.jpg" alt="Cookies" style="width:100%">
-          <h1>Cookies</h1>
-          <p class="price">$19.99 per 12 pieces</p>
-          <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-          <p><button>Add to Cart</button></p>
-        </div>
-
-		<div class="card">
-			<img src="https://img.jamieoliver.com/jamieoliver/recipe-database/91994148.jpg?tr=w-800,h-800" alt="BerryTart" style="width:100%">
-			<h1>Berry Tart (M)</h1>
-			<p class="price">$50.00 per 1 tart</p>
-			<p>Refreshing Summery Berry Tart</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://www.iheartbrazil.com/wp-content/uploads/2020/02/traditional-brigadeiro-recipe-9-480x270.jpg" alt="Brigadeiros" style="width:100%">
-			<h1>Brigadeiros</h1>
-			<p class="price">$40.00 per 12 pieces</p>
-			<p>Ooey Gooey GF chocolatey goodness</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://amiraspantry.com/wp-content/uploads/2020/04/basbousa-1-1024x1024.jpg" alt="harissa" style="width:100%">
-			<h1>Harissa</h1>
-			<p class="price">$60.00 per 12 pieces</p>
-			<p>Healthy Almond-Semolina Tunisian pastry with Orange Blossom Water</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://www.modernhoney.com/wp-content/uploads/2019/12/Coconut-Macaroons-9-scaled.jpg" alt="macarons" style="width:100%">
-			<h1>Coconut Macarons</h1>
-			<p class="price">$40.00 per 12 pieces</p>
-			<p>Crunchy and Chewy Coconut Macarons dipped in bitter-sweet chocolate</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://letsdishrecipes.com/wp-content/uploads/2019/11/Chocolate-Pecan-Pie-feature.jpg" alt="pecanPie" style="width:100%">
-			<h1>Pecan Pie</h1>
-			<p class="price">$60.00 per 1 pie</p>
-			<p>The most delicious fall pie (in Spring)</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://thescranline.com/wp-content/uploads/2021/08/Cookie-Dough-Cheesecake-WEB-02.jpg" alt="chessecake" style="width:100%">
-			<h1>Cookie Dough Cheesecake (L)</h1>
-			<p class="price">$80.00 per 1 Cheesecake</p>
-			<p>Your two favorite desserts (cookies + cheesecake) merged in one!</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://amiraspantry.com/wp-content/uploads/2014/03/qatayef-I-500x500.jpg" alt="Qatayef" style="width:100%">
-			<h1>Qatayef</h1>
-			<p class="price">$40.00 per 7 pieces</p>
-			<p>Delicious Levantine Dessert with a creamy-nutty filling</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-		  <div class="card">
-			<img src="https://www.sidechef.com/recipe/2b4ef332-f00d-4c80-8624-49794c853acc.jpg?d=1408x1120" alt="Baghrir" style="width:100%">
-			<h1>Baghrir</h1>
-			<p class="price">$40.00 per 12 pieces</p>
-			<p>Who says you can't have dessert for breakfast? Not with these delicious North African pancakes</p>
-			<p><button>Add to Cart</button></p>
-		  </div>
-
-        <div id="footer">
-            University of Southern California &copy; 2022
-        </div> <!-- #footer -->
-</body>
+	</body>
+</html>
