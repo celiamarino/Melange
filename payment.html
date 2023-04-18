@@ -45,7 +45,8 @@
                         <!-- Content -->
                         <h2>Thanks for shopping at Melange!</h2>
                         <p>Send the payment by Venmo to @melangebakery with your name and order number and we will send you your products.</p>
-					</div>
+                        <center><button onclick="orderNumber()">Get My Order Number</button></center>
+                    </div>
 				</div>
 						
 					</div>
@@ -146,5 +147,10 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+            <script>
+                function orderNumber() {
+                    alert("Your order number is " + Math.floor(Math.random() * 10000) + ". Make sure to include it in the venmo description!");
+                }
+            </script>
 	</body>
 </html>
