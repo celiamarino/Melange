@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pretty Unordered List with Boxes</title>
+	<style>
+		/* Styling for the unordered list */
+		.my-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Styling for list items */
+		.my-list li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			background-color: #f8f8f8;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		.my-list li img {
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+		}
+
+		.my-list li .item-name {
+			flex-grow: 1;
+			font-weight: bold;
+		}
+
+		.my-list li .item-price {
+			font-size: 14px;
+			color: #777;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Cart</h1>
+	<div class="cart-items">
+		<h2>Cart Items:</h2>
+		<ul class="my-list" id="cartItemsList">
+			<!-- Example cart item -->
+			<li>
+				<img src="item1.jpg" alt="Item 1">
+				<div>
+					<div class="item-name">Item 1</div>
+					<div class="item-price">$10.99</div>
+				</div>
+			</li>
+			<!-- Example cart item -->
+			<li>
+				<img src="item2.jpg" alt="Item 2">
+				<div>
+					<div class="item-name">Item 2</div>
+					<div class="item-price">$15.99</div>
+				</div>
+			</li>
+			<!-- Add more cart items as needed -->
+		</ul>
+	</div>
+</body>
+</html>

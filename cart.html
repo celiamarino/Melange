@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>My Cart</title>
+
+    <style>
+		/* Styling for the unordered list */
+		.my-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		/* Styling for list items */
+		.my-list li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px;
+			background-color: #ffffff;
+			border: 1px solid #000000;
+			border-radius: 5px;
+			padding: 10px;
+		}
+
+		.my-list li img {
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+		}
+
+		.my-list li .item-name {
+			flex-grow: 1;
+			font-weight: bold;
+            color: #ffffff;
+		}
+
+		
+    </style>
 </head>
 <body>
     <body class="no-sidebar is-preload">
@@ -40,15 +74,26 @@
                     </nav>
             </section>
 
-    <h1><center>My Cart</center></h1>
-    <h1><center>Order Summary</center></h1>
-    <br>
+            <div id="main" class="wrapper style2">
+                <div class="container">
+                    <div id="content">
+                        <header class="style1">
+                            <h2>My Cart</h2>
+                            <p>Order Summary</p>
+                        </header>
+                        <div class="cart-items">
+                            <ul class="my-list" id="cartItemsList"></ul>
+                        </div>
+                        <button onclick = "buyNow()">Buy Now</button>
+                     </div>
+                </div>
+            </div>
+            
 
-    <center><button onclick = "window.location.href='payment.html';">Buy Now</button></center>
-    <br>
+
 
     <!-- Footer -->
-    <section id="footer" class="wrapper">
+    <section id="footer" class="wrsapper">
         <div class="container">
             
             <div class="row">
@@ -141,6 +186,38 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+
+
+    <script>
+        function buyNow(){
+            erase()
+            window.location.href='payment.html';
+        }  
+        
+        
+    // window.location.href='payment.html';
+        //localStorage.removeItem("cart");
+
+        // Retrieve the stored cart items from localStorage
+        let thecart = getCart();
+        
+        console.log("GET", thecart)
+
+         // Get the UL element to display cart items
+        let cartItemsList = document.getElementById("cartItemsList");
+
+        // Clear any existing list items
+        cartItemsList.innerHTML = "";
+
+        // Loop through the cart items and create list elements for each item
+        thecart.forEach(function(item) {
+            let li = document.createElement("li");
+            li.textContent = item;
+            cartItemsList.appendChild(li);
+        });
+    </script>
+    
 
 </body>
 </html>
