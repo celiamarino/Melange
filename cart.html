@@ -86,23 +86,21 @@
                         </div>
                         <div class="total"></div>
 
+                            const cTotal = cartbox.querySelector('.total');
+                            let cartTotal = 0;
+                            let price = 0;
 
-JavaScript:
- const cTotal = cartbox.querySelector('.total');
- let cartTotal = 0;
- let price = 0;
-
-  JSON.parse(localStorage.getItem("items")).map(data=>
-  {
-      price = data.price;
-      for(var i = 0; i < price.length; i++)
-      {
-            cartTotal += parseFloat(price[i]);
-       }
-   });
-    cartTotal = '<p class="amount">Total Amount: '+cartTotal+'</p>'
-           
-    cTotal.innerHTML = cartTotal;
+                            JSON.parse(localStorage.getItem("items")).map(data=>
+                            {
+                                price = data.price;
+                                for(var i = 0; i < price.length; i++)
+                                {
+                                        cartTotal += parseFloat(price[i]);
+                                }
+                            });
+                                cartTotal = '<p class="amount">Total Amount: '+cartTotal+'</p>'
+                                    
+                                cTotal.innerHTML = cartTotal;
                         <button onclick = "buyNow()">Buy Now</button>
                      </div>
                 </div>
