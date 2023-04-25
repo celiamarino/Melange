@@ -217,35 +217,7 @@
             li.textContent = item;
             cartItemsList.appendChild(li);
         });
-        public class MyCart {
-    private double totalPrice;
-    private static final String COST_KEY = "cost";
-
-    public void setCost(double price) {
-        totalPrice += price;
-        // Store the updated cost in the session storage
-        SessionStorage.setItem(COST_KEY, String.valueOf(totalPrice));
-    }
-
-    public double getCost() {
-        // Retrieve the cost from the session storage
-        String costStr = SessionStorage.getItem(COST_KEY);
-        if (costStr != null) {
-            totalPrice = Double.parseDouble(costStr);
-        }
-        return totalPrice;
-    }
-}
-
-// Define a price item at the top of the JS file after the cart object
-double priceItem = 10.0;
-
-// Example usage:
-ShoppingCart cart = new ShoppingCart();
-cart.setCost(priceItem);
-double totalCost = cart.getCost();
-System.out.println("Total cost: " + totalCost);
-
+        
 
         
     </script>
