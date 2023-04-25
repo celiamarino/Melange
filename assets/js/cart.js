@@ -1,5 +1,6 @@
 // Define the cart array
 let cart = [];
+let price = 0;
 
 // Add item to cart
 function addItemToCart(item) {
@@ -8,6 +9,11 @@ function addItemToCart(item) {
     sessionStorage.setItem("cart", JSON.stringify(cart));
     console.log("CART:" , cart)
 
+}
+
+function addPrice(cost) {
+  price = price += cost
+  sessionStorage.setItem("price", JSON.stringify(price));
 }
 
 // Remove item from cart
@@ -22,18 +28,26 @@ function removeItemFromCart(item) {
 // Buy now - clear cart
 function erase() {
     cart = [];
+    price = 0;
     sessionStorage.removeItem("cart");
-    console.log("After erase:" , cart)
-
+    sessionStorage.removeItem("price");
 }
 
 // Get cart
 function getCart() {
-    console.log("The Cart:" , cart)
     let storedCart = sessionStorage.getItem("cart");
   if (storedCart) {
     return JSON.parse(storedCart);
   } else {
     return [];
   }
+}
+
+function getCost(){
+    let storedPrice = sessionStorage.getItem("price");
+    if (storedPrice) {
+      return storedPrice
+      } else {
+      return null;
+    }
 }

@@ -85,7 +85,7 @@
                             <ul class="my-list" id="cartItemsList"></ul>
                         </div>
                         <div class="total"></div>
-                        <h1>Your total is: $68.97</h1>
+                        <h1 id="totalCost">Your total is: </h1>
                         <button onclick = "buyNow()">Buy Now</button>
                      </div>
                 </div>
@@ -196,16 +196,14 @@
             erase()
             window.location.href='payment.html';
         }  
-        
-        
-    // window.location.href='payment.html';
-        //localStorage.removeItem("cart");
 
         // Retrieve the stored cart items from localStorage
         let thecart = getCart();
-        
-        console.log("GET", thecart)
+        let thePrice = getCost();
+        var totalElement = document.getElementById("totalCost");
+        totalElement.textContent = "Your total is: " + thePrice; // Update the content of the element
 
+        
          // Get the UL element to display cart items
         let cartItemsList = document.getElementById("cartItemsList");
 
@@ -218,9 +216,6 @@
             li.textContent = item;
             cartItemsList.appendChild(li);
         });
-        
-
-        
     </script>
     
 
