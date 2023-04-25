@@ -55,7 +55,7 @@
 											<h1>Milo Brownies</h1>
 											<p class="price">$20</p>
 											<p>For a box of 8.</p>
-											<p><button id="addToCartButton" onclick="addItemToCart('Milo Brownies', 20.00)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addItemToCart('Milo Brownies')">Add to Cart</button></p>
 										</div>
 									</div>
 									<div class="col-4 col-12-medium">
@@ -64,7 +64,7 @@
 											<h1>Honey Biscuits</h1>
 											<p class="price">$19.99</p>
 											<p>For a box of 7.</p>
-											<p><button id="addToCartButton" onclick="addToCart('Honey Biscuits', 19.99)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addToCart('Honey Biscuits')">Add to Cart</button></p>
 										</div>
 									</div>
 									<div class="col-4 col-12-medium">
@@ -73,7 +73,7 @@
 											<h1>Olive Oil cake</h1>
 											<p class="price">$49.99</p>
 											<p>12 inch Cake.</p>
-											<p><button id="addToCartButton" onclick="addToCart('Olive Oil Cake', 49.99)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addToCart('Olive Oil Cake')">Add to Cart</button></p>
 										</div>
 									</div>
 								</div>
@@ -84,7 +84,7 @@
 											<h1>Nutella Donuts</h1>
 											<p class="price">$15.99</p>
 											<p>For a box of 3..</p>
-											<p><button id="addToCartButton" onclick="addToCart('Nutella Donuts', 15.99)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addToCart('Nutella Donuts')">Add to Cart</button></p>
 										</div>
 									</div>
 									<div class="col-4 col-12-medium">
@@ -93,7 +93,7 @@
 											<h1>Macaroons</h1>
 											<p class="price">$12.00</p>
 											<p>For a box of 4..</p>
-											<p><button id="addToCartButton" onclick="addToCart('Macaroons', 12.00)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addToCart('Macaroons')">Add to Cart</button></p>
 										</div>
 									</div>
 									<div class="col-4 col-12-medium">
@@ -102,7 +102,7 @@
 											<h1>Cinammon Rolls</h1>
 											<p class="price">$16.99</p>
 											<p>For a box of 5..</p>
-											<p><button id="addToCartButton" onclick="addToCart('Cinammon Rolls', 16.99)">Add to Cart</button></p>
+											<p><button id="addToCartButton" onclick="addToCart('Cinammon Rolls')">Add to Cart</button></p>
 										</div>
 									</div>
 								</div>
@@ -121,7 +121,7 @@
 							<h1>Subscription Box 1</h1>
 							<p class="price">$49.99</p>
 							<p>This week's subscription box includes chocolate chip cookies, brownies, olive oil cake and fresh bread</p>
-							<p><button id="addToCartButton" onclick="addToCart('Subscription Box 1', 49.99)">Add to Cart</button></p>
+							<p><button id="addToCartButton" onclick="addToCart('Subscription Box 1')">Add to Cart</button></p>
 						</div>
 					</div>
 					<div class="col-4 col-12-medium">
@@ -130,7 +130,7 @@
 							<h1>Subscription Box 2</h1>
 							<p class="price">$59.99</p>
 							<p>This week's subscription box includes chocolate chip cookies, brownies, olive oil cake, cinammon rolls and fresh bread.</p>
-							<p><button id="addToCartButton" onclick="addToCart('Subscription Box 2', 59.99)">Add to Cart</button></p>
+							<p><button id="addToCartButton" onclick="addToCart('Subscription Box 2')">Add to Cart</button></p>
 						</div>
 					</div>
 					<div class="col-4 col-12-medium">
@@ -139,7 +139,7 @@
 							<h1>Subscription Box 3</h1>
 							<p class="price">$69.99</p>
 							<p>This box includes Banana bread, Sourdough bread, Cereal cookies, Pumpkin cookies and Olive oil Cake.</p>
-							<p><button id="addToCartButton" onclick="addItemToCart('Subscription Box 3', 69.99)">Add to Cart</button></p>
+							<p><button id="addToCartButton" onclick="addItemToCart('hey')">Add to Cart</button></p>
 						</div>
 					</div>
 				</div>
@@ -244,11 +244,8 @@
 
 
 			<script>
-				var total = 0
-
-				function addToCart(item, itemCost) {
+				function addToCart(item) {
 					addItemToCart(item)
-					total += itemCost
   				}		
 			</script>
 
